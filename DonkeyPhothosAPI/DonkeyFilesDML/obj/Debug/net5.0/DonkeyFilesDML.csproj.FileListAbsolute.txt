@@ -1,0 +1,16 @@
+D:\Trabajo\Donkey\DonkeyPhothosAPI\DonkeyFilesDML\bin\Debug\net5.0\DonkeyFilesDML.deps.json
+D:\Trabajo\Donkey\DonkeyPhothosAPI\DonkeyFilesDML\bin\Debug\net5.0\DonkeyFilesDML.dll
+D:\Trabajo\Donkey\DonkeyPhothosAPI\DonkeyFilesDML\bin\Debug\net5.0\ref\DonkeyFilesDML.dll
+D:\Trabajo\Donkey\DonkeyPhothosAPI\DonkeyFilesDML\bin\Debug\net5.0\DonkeyFilesDML.pdb
+D:\Trabajo\Donkey\DonkeyPhothosAPI\DonkeyFilesDML\obj\Debug\net5.0\DonkeyFilesDML.csprojAssemblyReference.cache
+D:\Trabajo\Donkey\DonkeyPhothosAPI\DonkeyFilesDML\obj\Debug\net5.0\DonkeyFilesDML.GeneratedMSBuildEditorConfig.editorconfig
+D:\Trabajo\Donkey\DonkeyPhothosAPI\DonkeyFilesDML\obj\Debug\net5.0\DonkeyFilesDML.AssemblyInfoInputs.cache
+D:\Trabajo\Donkey\DonkeyPhothosAPI\DonkeyFilesDML\obj\Debug\net5.0\DonkeyFilesDML.AssemblyInfo.cs
+D:\Trabajo\Donkey\DonkeyPhothosAPI\DonkeyFilesDML\obj\Debug\net5.0\DonkeyFilesDML.csproj.CoreCompileInputs.cache
+D:\Trabajo\Donkey\DonkeyPhothosAPI\DonkeyFilesDML\obj\Debug\net5.0\staticwebassets\DonkeyFilesDML.StaticWebAssets.Manifest.cache
+D:\Trabajo\Donkey\DonkeyPhothosAPI\DonkeyFilesDML\obj\Debug\net5.0\staticwebassets\DonkeyFilesDML.StaticWebAssets.xml
+D:\Trabajo\Donkey\DonkeyPhothosAPI\DonkeyFilesDML\obj\Debug\net5.0\scopedcss\bundle\DonkeyFilesDML.styles.css
+D:\Trabajo\Donkey\DonkeyPhothosAPI\DonkeyFilesDML\obj\Debug\net5.0\DonkeyFilesDML.RazorTargetAssemblyInfo.cache
+D:\Trabajo\Donkey\DonkeyPhothosAPI\DonkeyFilesDML\obj\Debug\net5.0\DonkeyFilesDML.dll
+D:\Trabajo\Donkey\DonkeyPhothosAPI\DonkeyFilesDML\obj\Debug\net5.0\ref\DonkeyFilesDML.dll
+D:\Trabajo\Donkey\DonkeyPhothosAPI\DonkeyFilesDML\obj\Debug\net5.0\DonkeyFilesDML.pdb
