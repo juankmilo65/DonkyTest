@@ -42,7 +42,7 @@ namespace DonkeyPhothosAPI
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             app.UseCors(options =>
-             options.WithOrigins("http://localhost:49364")
+             options.WithOrigins("http://localhost:4200")
              .AllowAnyMethod()
              .AllowAnyHeader());
 

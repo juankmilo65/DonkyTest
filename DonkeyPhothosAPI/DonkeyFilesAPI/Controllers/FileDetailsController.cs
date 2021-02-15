@@ -65,8 +65,6 @@ namespace DonkeyFilesAPI.Controllers
                     throw;
                 }
             }
-
-            return NoContent();
         }
 
         // POST: api/FileDetails

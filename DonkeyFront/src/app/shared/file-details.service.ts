@@ -9,15 +9,20 @@ export class FileDetailsService {
 
   constructor(private http:HttpClient) { }
 
-  formData: FileDetails = new FileDetails()
-  readonly baseUrl='http://localhost:51962/'
+  formData: FileDetails = new FileDetails();
+  list: FileDetails[];
+  readonly baseUrl='http://localhost:51962/api/FileDetails'
 
   postFileDetails(){
-   return this.http.post(this.baseUrl+'api/FileDetails', {
-      "fileId": 0,
-      "fileName": "JuanK",
-      "fileSize": "22",
-      "fileDate": "22/02/2021"
-    })
+   return this.http.post(this.baseUrl, this.formData)
+  }
+
+  deleteFile(id:number){
+    return this.http.delete(`${this.baseUrl}/${id}`)
+  }
+
+  refreshList(){
+    this.http.get(this.baseUrl).toPromise()
+    .then(res => this.list = res as FileDetails[]);
   }
 }
