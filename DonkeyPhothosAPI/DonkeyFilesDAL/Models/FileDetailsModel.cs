@@ -12,5 +12,10 @@ namespace DonkeyFilesDAL.Models
         public string FileSize { get; set; }
 
         public string FileDate { get; set; }
+
+        public string FileType { get; set; }
+
+        [MaxLength]
+        public byte[] DataFiles { get; set; }
     }
 }

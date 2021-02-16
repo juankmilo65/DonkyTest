@@ -1,29 +1,46 @@
 <form novalidate #form="ngForm" (submit)="onSubmit(form)">
     <div class="row">
+     
         <div class='row col-md-12'>
-            <label>File</label>
-
+            <div class='row col-md-6'>
+                <div class='col-md-5'>
+                    <label>File Type</label>
+                </div>
+                <div class='select col-md-7'>
+                    <select name="filetypes" id="fileTypes" [(ngModel)]='service.formData.optionSelected' (change)="onSelectMime(service.formData.optionSelected)">
+                        <option [ngValue]="undefined" disabled selected>Choose</option>
+                        <option *ngFor="let fileType of service.filetypes" [ngValue]="fileType.code" >
+                            {{fileType.code}}
+                        </option>
+                    </select>
+                </div>
+            </div>
+            <div class='row col-md-6'>
+                <div class='col-md-3'>
+                    <label>MaxSize</label>
+                </div>
+                <div class="col-md-7">
+                    <input class="form-control form-control-sm"  type="number"  name="maxSize" #maxSize="ngModel" [(ngModel)]="service.formData.maxSize" (input)="onSetSize($event)" placeholder="1024 == 1mb" />
+                </div>
+            </div>
+            
+        </div>
+        <div class='row col-md-12'>
             <div class="col-md-7">
                 <input type="hidden" name="fileId" [value]="service.formData.fileId">  
-                <input type="file" #file accept="image/*" 
+                <input  type="file" #file [accept]="mimeType" 
                 (change)="handleFileInput(file.files)" style="display:none">
-                <input disabled class="form-control form-control-lg" 
+                <input disabled class="form-control form-control-sm" 
                 placeholder="File Name" name="fileName" 
                 #fileName="ngModel" [(ngModel)]="service.formData.fileName" required>
             </div>
             <div class="col-md-4">
-                <button type="button" class="btn btn-success selectedButton" (click)='file.click()'>Select File</button>
+                <button [disabled]='mimeType === undefined' type="button" class="btn btn-success btn-sm selectedButton" (click)='file.click()'>Select File</button>
             </div>
         </div>
-       <div class='col-md-12'>
-        <div class="col-md-8">
-            <span class='upload' *ngIf="progress > 0">
-                {{progress}}
-            </span>
-            <span class='upload'>
-                {{message}}
-            </span>
-        </div>
+        
+        <div class='col-md-12'>
+        
         <div class="col-md-4">
             <button class='btn btn-info btn-block buttonStyle' type="submit" 
             [disabled]='!service.formData.fileName'>Upload File</button>

@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
 using System.Threading.Tasks;
 using AutoMapper;
 using DonkeyFilesBL.Interfaces;
@@ -57,7 +59,16 @@ namespace DonkeyFilesBL.Files
 
             await Task.Run(() =>
             {
-                fileDetails = resultMapper.Map<FillesDetailsDTO>(repo.PostFileDetails(inputMapper.Map<FileDetailsModel>(fileDetailsInput)));
+                var dataObject = inputMapper.Map<FileDetailsModel>(fileDetailsInput);
+
+                if (fileDetailsInput.File.Contains(","))
+                {
+                    fileDetailsInput.File = fileDetailsInput.File[(fileDetailsInput.File.IndexOf(",") + 1)..];
+                }
+
+                dataObject.DataFiles = Convert.FromBase64String(fileDetailsInput.File);
+
+                fileDetails = resultMapper.Map<FillesDetailsDTO>(repo.PostFileDetails(dataObject));
             });
 
             return fileDetails;

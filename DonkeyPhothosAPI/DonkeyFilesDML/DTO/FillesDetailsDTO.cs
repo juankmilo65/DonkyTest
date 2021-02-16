@@ -13,5 +13,9 @@ namespace DonkeyFilesDML.DTO
         public string FileSize { get; set; }
 
         public string FileDate { get; set; }
+
+        public string FileType { get; set; }
+
+        public string File { get; set; }
     }
 }

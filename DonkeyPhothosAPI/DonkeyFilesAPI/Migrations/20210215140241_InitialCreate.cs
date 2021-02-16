@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace DonkeyFilesAPI.Migrations
@@ -15,7 +16,9 @@ namespace DonkeyFilesAPI.Migrations
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     FileName = table.Column<string>(type: "text", nullable: true),
                     FileSize = table.Column<string>(type: "text", nullable: true),
-                    FileDate = table.Column<string>(type: "text", nullable: true)
+                    FileDate = table.Column<string>(type: "text", nullable: true),
+                    FileType = table.Column<string>(type: "text", nullable: true),
+                    DataFiles = table.Column<byte[]>(type: "bytea", nullable: true)
                 },
                 constraints: table =>
                 {
