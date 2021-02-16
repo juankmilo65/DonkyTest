@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DonkeyFilesDML", "DonkeyFil
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DonkeyFilesDAL", "DonkeyFilesDAL\DonkeyFilesDAL.csproj", "{BEA4ACC4-AFAF-4B0E-9963-06B5580AE88D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DonkeyFilesBL", "DonkeyFilesBL\DonkeyFilesBL.csproj", "{9C911130-B942-46A8-A8BF-5FCD7B8D230C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DonkeyFilesBL", "DonkeyFilesBL\DonkeyFilesBL.csproj", "{9C911130-B942-46A8-A8BF-5FCD7B8D230C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DonkeyFilesTest", "DonkeyFilesTest\DonkeyFilesTest.csproj", "{055C72A8-1019-405E-87ED-C5A2AB933B29}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{9C911130-B942-46A8-A8BF-5FCD7B8D230C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C911130-B942-46A8-A8BF-5FCD7B8D230C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C911130-B942-46A8-A8BF-5FCD7B8D230C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{055C72A8-1019-405E-87ED-C5A2AB933B29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{055C72A8-1019-405E-87ED-C5A2AB933B29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{055C72A8-1019-405E-87ED-C5A2AB933B29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{055C72A8-1019-405E-87ED-C5A2AB933B29}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
