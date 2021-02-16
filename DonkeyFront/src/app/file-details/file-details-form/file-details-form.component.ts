@@ -13,9 +13,7 @@ import {formatDate} from '@angular/common';
   styleUrls: ['./file-details-form.component.css']
 })
 export class FileDetailsFormComponent implements OnInit {
-
-  public message: string;
-  public progress: number;
+  
   public mimeType: string | undefined;
   public optionSelected : string | undefined;
   private fileToUpload: File | null = null;
@@ -32,15 +30,22 @@ export class FileDetailsFormComponent implements OnInit {
 
   onSubmit(form:NgForm){
     debugger
-    this.service.postFileDetails().subscribe(
-      res=>{
-        this.resetForm(form);
-        this.service.refreshList();
-        this.toastr.success('Submitted successfully', 'File uploaded')
-      },err=>{
-        console.log(err);
-      }
-    )
+
+    if(parseInt(form.value.maxSize) <  parseInt(this.service.formData.fileSize))
+    {
+      this.toastr.error('Max size', 'File was not uploaded')
+    }else
+    {
+      this.service.postFileDetails().subscribe(
+        res=>{
+          this.resetForm(form);
+          this.service.refreshList();
+          this.toastr.success('Submitted successfully', 'File uploaded')
+        },err=>{
+          console.log(err);
+        }
+      )
+    }
   }
   onCleanForm()
   {
@@ -66,8 +71,6 @@ export class FileDetailsFormComponent implements OnInit {
 
   handleFileInput(files:any)
   {
-    debugger
-    
     if(files.length === 0)
     return;
 

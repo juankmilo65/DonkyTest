@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { FileDetails } from './file-details.model';
 import {HttpClient} from "@angular/common/http";
 import mimeTypes from '../../assets/mimeTypes.json'
+import {Observable} from 'rxjs'
 
 @Injectable({
   providedIn: 'root'
@@ -16,8 +17,8 @@ export class FileDetailsService {
 
   readonly baseUrl='http://localhost:51962/api/FileDetails'
   
-  postFileDetails(){
-   return this.http.post(this.baseUrl, this.formData)
+  postFileDetails():Observable<Object[]>{
+   return this.http.post<Object[]>(this.baseUrl, this.formData)
   }
 
   deleteFile(id:number){

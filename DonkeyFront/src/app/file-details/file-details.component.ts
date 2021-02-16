@@ -9,6 +9,8 @@ import { FileDetailsService } from '../shared/file-details.service';
 })
 export class FileDetailsComponent implements OnInit {
 
+   title = "Welcome to File storage";
+
   constructor(
     public service: FileDetailsService,
     private toastr: ToastrService) { }

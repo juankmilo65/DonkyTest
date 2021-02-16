@@ -9,6 +9,8 @@ import { FileDetailsComponent } from './file-details/file-details.component';
 import { FileDetailsFormComponent } from './file-details/file-details-form/file-details-form.component';
 import { HttpClientModule } from '@angular/common/http';
 
+import {FileDetailsService} from './shared/file-details.service'
+
 
 @NgModule({
   declarations: [
@@ -23,7 +25,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     ToastrModule.forRoot()
   ],
-  providers: [],
+  providers: [FileDetailsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
